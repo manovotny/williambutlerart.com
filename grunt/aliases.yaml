@@ -1,0 +1,67 @@
+# Default
+#----------------------------------------------------------------------------------
+
+default:
+  - build
+
+# Setup
+#----------------------------------------------------------------------------------
+
+init:
+  - replace
+  - rename
+  - shell:init
+  - build
+
+refresh:
+  - shell:refresh
+
+update:
+  - shell:update
+  - build
+
+upgrade:
+  - shell:upgrade
+
+# Build
+#----------------------------------------------------------------------------------
+
+build:
+  - clean:build
+  - curl
+  - lint
+  - js
+  - css
+  - images
+
+lint:
+  - jshint
+  - jscs
+  - scsslint
+
+js:
+  - browserify
+
+css:
+  - sass
+  - autoprefixer
+  - cssmin
+
+images:
+  - imagemin:svg
+  - grunticon
+  - imagemin:png
+
+# Release
+#----------------------------------------------------------------------------------
+
+release:
+  - build
+  - replace:project_version
+  - replace:update_project
+
+# Deploy
+#----------------------------------------------------------------------------------
+
+deploy:
+  - clean:deploy
