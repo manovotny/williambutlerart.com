@@ -28,7 +28,7 @@ module.exports = (function () {
             slug: 'williambutlerart',
             type: 'theme', // Should be `plugin` or `theme`.
             url: 'https://github.com/manovotny/williambutlerart.com',
-            version: '0.0.0'
+            version: '1.0.0'
         }
     };
 

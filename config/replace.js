@@ -19,7 +19,7 @@ module.exports = (function () {
             name: 'William Butler Art',
             slug: 'williambutlerart',
             url: 'https://github.com/manovotny/williambutlerart.com',
-            version: '0.0.0'
+            version: '1.0.0'
         },
         translations: {
             domain: 'williambutlerart',
