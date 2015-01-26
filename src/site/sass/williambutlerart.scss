@@ -1,1 +1,75 @@
 @import 'partials/bootstrap';
+@import 'partials/scut';
+
+$spacing: 15px;
+
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    height: auto;
+    width: 100%;
+}
+
+.header {
+    background-color: #1e1e1e;
+    padding-bottom: $spacing;
+    padding-top: $spacing;
+    text-align: center;
+}
+
+.navigation-items {
+    @include scut-list-unstyled;
+}
+
+.navigation-item {
+    margin-bottom: $spacing;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.content {
+    margin-bottom: $spacing;
+}
+
+.footer {
+    color: #646464;
+    font-size: 11px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@media (min-width: $screen-sm-min) {
+    .header {
+        @include clearfix;
+
+        text-align: left;
+    }
+
+    .welcome-message {
+        display: inline-block;
+        float: left;
+    }
+
+    .navigation {
+        display: inline-block;
+        float: right;
+    }
+
+    .welcome-message,
+    .navigation-item {
+        margin-bottom: 0;
+    }
+
+    .navigation-items {
+        @include scut-list-inline(25px);
+    }
+}
