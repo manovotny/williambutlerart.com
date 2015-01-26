@@ -1,2 +1,2 @@
 baseurl: ''
-exclude: ['*.iml', '.idea', 'bower_components', 'bower.json', 'config', 'grunt', 'Gruntfile.js', 'node_modules', 'package.json', 'sass']
+exclude: ['*.iml', '*.scss', '.idea', 'bower_components', 'bower.json', 'config', 'grunt', 'Gruntfile.js', 'node_modules', 'package.json', 'README.md', 'sass']
